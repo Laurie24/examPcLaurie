@@ -1,0 +1,27 @@
+label{
+  color: black;
+}
+
+.btn{
+  background-color: #154854;
+}
+
+.container{
+  padding: 5rem;
+  border-radius: 1rem;
+  border: #154854 2px solid;
+  margin-bottom: 10rem;
+  width: 50rem;
+}
+
+input {
+  background-color: white;
+  border: solid .5px #154854;
+}
+
+h1{
+  text-align: center;
+  color: #154854;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

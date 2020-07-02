@@ -1,0 +1,59 @@
+{
+  "pc": [
+    {
+      "id": 1,
+      "photo": "latitude.jpg",
+      "modele": "Latitude 3500 - 15.6",
+      "marque": "Dell",
+      "type": "Portable",
+      "categorie": "Bureautique",
+      "prixAchat": 120.88,
+      "prixVente": "300",
+      "dateEntreStock": "2012-04-23"
+    },
+    {
+      "photo": "macbook.jpg",
+      "modele": "Macbook Pro",
+      "marque": "Apple",
+      "type": "Portable",
+      "categorie": "Bureautique",
+      "dateEntreStock": "2020-07-02",
+      "prixAchat": "2000",
+      "prixVente": "2300",
+      "id": 2
+    },
+    {
+      "photo": "pavillion.jpg",
+      "modele": "Pavillion",
+      "marque": "HP",
+      "type": "Fixe",
+      "categorie": "Bureautique",
+      "dateEntreStock": "2019-05-06",
+      "prixAchat": "650",
+      "prixVente": "799",
+      "id": 3
+    },
+    {
+      "photo": "asus.jpg",
+      "modele": "Zenbook",
+      "marque": "Asus",
+      "type": "Portable",
+      "categorie": "Bureautique",
+      "dateEntreStock": "2020-04-13",
+      "prixAchat": "2300",
+      "prixVente": "2699",
+      "id": 4
+    },
+    {
+      "photo": "envy.jpg",
+      "modele": "Envy X360",
+      "marque": "HP",
+      "type": "Tablette hybride",
+      "categorie": "Premier prix",
+      "dateEntreStock": "2018-11-06",
+      "prixAchat": "340",
+      "prixVente": "450",
+      "id": 5
+    }
+  ]
+}

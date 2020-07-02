@@ -1,0 +1,22 @@
+<div class="box">
+  <ng-container *ngIf="!isLoading">
+    <div class="row justify-content-center">
+      <div class="card shadow " style="width: 40rem;">
+        <div class="card-body">
+          <h1>{{ pc.modele }}</h1>
+          <img src="assets/images/{{pc.photo}}" width="100%" >
+          <p>Marque : {{pc.marque}}</p>
+          <p>Type : {{pc.type}}</p>
+          <p>Catégorie : {{pc.categorie}}</p>
+          <p>Date : {{pc.dateEntreStock}}</p>
+          <p>Prix d'achat : {{pc.prixAchat}}</p>
+          <p>Prix de vente : {{pc.prixVente}}</p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="isLoading">
+    <div>Chargement en cours...</div>
+  </ng-container>
+</div>

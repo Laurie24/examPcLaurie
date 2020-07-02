@@ -1,0 +1,59 @@
+
+h1{
+  text-align: center;
+  color: white;
+  padding-top: 3rem;
+}
+
+h4{
+  color: black;
+}
+
+p{
+  color: #5c5c5c;
+}
+
+.card{
+  background-color: white;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+
+
+.btn{
+  background-color: #154854;
+  border: #154854 1px solid;
+  margin: .3rem;
+  color: white;
+}
+
+.btn:hover{
+  background-color: white;
+  border: #154854 1px solid;
+  margin: 0.3rem;
+  color: #154854;
+}
+
+.add{
+  text-align: center;
+}
+
+.row{
+  justify-content: center;
+}
+
+a{
+  color: black;
+}
+
+img{
+  padding: .5rem;
+}
+
+h5{
+  text-align: center;
+  color: white;
+}

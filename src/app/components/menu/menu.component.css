@@ -1,0 +1,33 @@
+img{
+  width: 250px;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+}
+
+.btn{
+  background-color: white;
+  border: #154854 1px solid;
+  margin: .5rem;
+  color: #154854;
+  margin-bottom: 3rem;
+}
+
+.btn:hover{
+  background-color: #154854;
+  border: #154854 1px solid;
+  margin: .5rem;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.add{
+  text-align: center;
+}
+
+p{
+  padding-top: 1rem;
+  text-align: center;
+}

@@ -1,0 +1,29 @@
+<h1>Les PC en stock</h1>
+<h5>Il reste {{ pc.length }} ordinateurs en stock</h5>
+<div *ngIf="!isLoading" class="liste row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+  <div *ngFor="let pc of this.pc" class="card shadow" style="width: 20rem;">
+    <div class="card-body">
+      <h4>{{pc.modele}}</h4>
+      <img src='../../../assets/images/{{pc.photo}}' class="card-img-top" alt="">
+      <p class="card-text"><span class="font-weight-bold">Marque :</span> {{pc.marque}} </p>
+      <p class="card-text"><span class="font-weight-bold"> Type :</span> {{pc.type}} </p>
+      <p class="card-text"><span class="font-weight-bold"> Taille :</span> {{pc.categorie}} </p>
+      <p class="card-text"><span class="font-weight-bold"> Date :</span> {{pc.dateEntreStock}} </p>
+      <p class="card-text"><span class="font-weight-bold"> Prix d'achat :</span> {{pc.prixAchat}} €</p>
+      <p class="card-text"><span class="font-weight-bold"> Prix de vente :</span> {{pc.prixVente}} €</p>
+      <p class="card-text"><span class="font-weight-bold"> Rentabilité :</span> {{pc.prixVente - pc.prixAchat}} €</p>
+      <hr>
+      <a class="btn" [routerLink]="['/pc', pc.id]">Détails</a>
+      <br>
+      <a class="btn" routerLink="/home" style="color: #5c5c5c; cursor: pointer" (click)="deletePc(pc)">Supprimer</a>
+      <br>
+      <a class="btn" [routerLink]="['/pc/update', pc.id]">Modifier</a>
+    </div>
+  </div>
+</div>
+<div *ngIf="isLoading">
+  <div class="fa-3x">
+    <div>Chargement en cours</div>
+  </div>
+</div>
+

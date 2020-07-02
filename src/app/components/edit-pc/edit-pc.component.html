@@ -1,0 +1,86 @@
+<h1>Modifier un PC</h1>
+<div class="container">
+  <form #pcForm="ngForm" (ngSubmit)="editPc()">
+    <label for="nom">Photo</label>
+    <input type="text" class="form-control" id="photo" name="photo" required [(ngModel)]="pc.photo" #photo="ngModel">
+    <div [hidden]="photo.valid"
+         class="alert alert-danger">
+      Photo invalide
+    </div>
+
+    <label for="nom">Modèle</label>
+    <input type="text" class="form-control" id="nom" name="nom" required [(ngModel)]="pc.modele" #nom="ngModel">
+    <div [hidden]="nom.valid"
+         class="alert alert-danger">
+      Nom invalide
+    </div>
+
+
+    <div class="form-group">
+      <label>Marque</label> <br>
+      <ng-container *ngFor="let marque of marquePc">
+        <div>
+          <input type="radio" id="inputRadio-{{ marque }}"
+                 #marqueValidation="ngModel"
+                 name="marque" [value]="marque" required [(ngModel)]="pc.marque">
+          <label>{{ marque }}</label>
+        </div>
+      </ng-container>
+      <div [hidden]="pcForm.controls.marque?.valid" class="alert alert-danger">
+        Marque invalide
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="type">Type</label>
+      <select class="form-control" id="type"
+              required
+              [(ngModel)]="pc.type" name="type" #terrain="ngModel">
+        <option *ngFor="let type of typePc" [value]="type">{{type}}</option>
+      </select>
+      <div [hidden]="pcForm.controls.type?.valid"
+           class="alert alert-danger">
+        Type invalide
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Catégorie</label> <br>
+      <ng-container *ngFor="let categorie of categoriePc">
+        <div>
+          <input type="radio" id="inputRadio-{{ categorie }}"
+                 #categorieValidation="ngModel"
+                 name="marque" [value]="categorie" required [(ngModel)]="pc.categorie">
+          <label>{{ categorie }}</label>
+        </div>
+      </ng-container>
+      <div [hidden]="pcForm.controls.categorie?.valid" class="alert alert-danger">
+        Catégorie invalide
+      </div>
+    </div>
+
+    <label for="date">Date</label>
+    <input type="date" class="form-control" id="date" name="date" [(ngModel)]="pc.dateEntreStock" #date="ngModel">
+    <div [hidden]="date.valid"
+         class="alert alert-danger">
+      Date invalide
+    </div>
+
+    <label for="prixAchat">Prix d'achat</label>
+    <input type="text" class="form-control" id="prixAchat" name="prixAchat" [(ngModel)]="pc.prixAchat" #prixAchat="ngModel">
+    <div [hidden]="prixAchat.valid"
+         class="alert alert-danger">
+      Prix d'achat invalide
+    </div>
+
+    <label for="prixVente">Prix de vente</label>
+    <input type="text" class="form-control" id="prixVente" name="prixVente" [(ngModel)]="pc.prixVente" #prixVente="ngModel">
+    <div [hidden]="prixVente.valid"
+         class="alert alert-danger">
+      Prix d'achat invalide
+    </div>
+    <br>
+    <input routerLink="/home"  [disabled]="!pcForm.valid" type="submit" class="btn">
+  </form>
+</div>
+

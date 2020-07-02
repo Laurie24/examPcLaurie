@@ -1,0 +1,19 @@
+.card{
+  background-color: white;
+  color: black;
+  margin-bottom: 5rem;
+}
+h1{
+  color: black;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.box{
+  padding-top: 3rem;
+  background-color: rgba(255, 228, 207, 0.5);
+}
+
+a{
+  color: black;
+}
